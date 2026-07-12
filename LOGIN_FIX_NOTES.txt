@@ -1,0 +1,10 @@
+Login fix notes:
+1. After successful login, the program now opens the Main Menu directly without waiting on "Press Enter to continue".
+2. Constants.java now resolves the data folder more safely, even when running from an IDE with a different working directory.
+3. User.find(username, password) now supports passwords saved in BUsers.txt as encrypted text or plain text, so old/manual data files still work.
+4. Logout clears the current session user.
+
+Tested accounts:
+- User1 / 9898
+- User2 / 1234
+- w / w

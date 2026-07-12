@@ -1,0 +1,22 @@
+JavaFX GUI was added to the project.
+
+Main JavaFX class:
+com.bankmanagement.fx.BankFxApp
+
+Run using Maven:
+mvn clean javafx:run
+
+Added screens:
+1. Login Screen
+2. Dashboard
+3. Clients Management
+4. Transactions: Deposit, Withdraw, Transfer
+5. Transfer Log
+6. Users Management + Permissions
+7. Login Register
+8. Currency Exchange
+
+The old console version is still available:
+com.bankmanagement.Main
+
+JavaFX version uses the same OOP classes and the same text files in the data folder.

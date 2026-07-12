@@ -1,0 +1,22 @@
+Last modifications applied to this version:
+
+1. Changed Person from a normal class to an abstract class.
+2. Added abstract method getRoleDescription() inside Person.
+3. Overrode getRoleDescription() in User.
+4. Overrode getRoleDescription() in BankClient.
+5. Kept JavaFX GUI support through BankFxApp and MainFX.
+6. Added README.md in English matching the course requirements.
+7. Added PROJECT_REPORT_DRAFT.md to help prepare the final report.
+8. Added UML text diagram and AI Usage Declaration in the documentation.
+9. The console version is still available as a backup.
+
+Important classes modified:
+- src/main/java/com/bankmanagement/Person.java
+- src/main/java/com/bankmanagement/User.java
+- src/main/java/com/bankmanagement/BankClient.java
+
+JavaFX main class:
+- com.bankmanagement.fx.BankFxApp
+
+Console main class:
+- com.bankmanagement.Main
