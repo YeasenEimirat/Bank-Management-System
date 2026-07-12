@@ -2,7 +2,7 @@
 
 # Bank Management System
 
-### Java OOP application with JavaFX and Console interfaces
+### Java OOP Application with JavaFX and Console Interfaces
 
 ![Java](https://img.shields.io/badge/Java-17%2B-orange?logo=openjdk)
 ![JavaFX](https://img.shields.io/badge/JavaFX-21.0.2-blue)
@@ -10,104 +10,141 @@
 ![OOP](https://img.shields.io/badge/Design-Object--Oriented-success)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-A complete academic banking application that demonstrates core Object-Oriented Programming concepts, persistent text-file storage, user permissions, banking transactions, and a graphical JavaFX interface.
+A complete academic banking application that demonstrates Object-Oriented Programming concepts, text-file persistence, user permissions, banking transactions, activity logs, currency exchange, and a graphical JavaFX interface.
 
 </div>
 
 ---
 
-## Overview
+## Project Overview
 
-The **Bank Management System** is a Java application that simulates the essential operations of a real-world bank. It provides tools for managing clients and users, processing deposits, withdrawals, and transfers, viewing activity logs, and converting currencies.
+The **Bank Management System** is a Java application that simulates the essential operations of a real-world bank. It allows authorized users to manage clients and system users, process banking transactions, review activity logs, and perform currency conversion operations.
 
-The project contains two interfaces that use the same business classes and data files:
+The project provides two interfaces that share the same business classes and data files:
 
 - **JavaFX GUI** for graphical interaction.
 - **Console UI** as an additional command-line version.
 
-> **Academic notice:** This project was developed for learning and course assessment. It is not intended for use as a production banking system.
+> **Academic Notice:** This project was developed for learning and course assessment purposes. It is not intended for production banking use.
+
+---
 
 ## Application Preview
 
 <p align="center">
-  <img src="docs/images/dashboard.jpg" alt="Bank Management System dashboard" width="900">
+  <img src="https://github.com/user-attachments/assets/30e2c3e4-a8f2-4808-9a21-7ef06ede1c76"
+       alt="Bank Management System Login Screen"
+       width="850">
 </p>
+
+---
 
 ## Main Features
 
-- Secure login flow with input validation and a maximum of three attempts.
-- User management with role-based permissions using bitwise values.
+- Login system with input validation and a maximum of three attempts.
+- Password encryption and decryption for stored users.
+- User permissions using bitwise permission values.
 - Client management: list, add, edit, delete, refresh, and search.
-- Banking transactions: deposit, withdraw, and transfer funds.
-- Persistent transfer and login records.
-- Currency management: search, rate update, and currency conversion.
-- JavaFX dashboard with summary cards for clients, users, currencies, and login records.
-- File handling through readable `.txt` files.
-- Error handling and validation for user input and financial operations.
+- User management: list, add, edit, delete, and permission control.
+- Banking transactions: deposit, withdraw, and transfer.
+- Transfer log saved in a readable text file.
+- Login register saved in a readable text file.
+- Currency management: search, update rates, and convert currencies.
+- JavaFX dashboard with summary cards.
+- File handling using `.txt` files in the `data` directory.
+- Error handling and input validation.
 - Shared business logic between the JavaFX and Console versions.
+
+---
 
 ## Screenshots
 
-### Login and Dashboard
+### Login Screen
 
-| Login Screen | Dashboard |
-|---|---|
-| <img src="docs/images/login-screen.jpg" alt="Login screen" width="100%"> | <img src="docs/images/dashboard.jpg" alt="Dashboard" width="100%"> |
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/30e2c3e4-a8f2-4808-9a21-7ef06ede1c76"
+       alt="Login Screen"
+       width="850">
+</p>
 
-### Clients and Users
+### Dashboard
 
-| Client Management | User Management |
-|---|---|
-| <img src="docs/images/clients-management.jpg" alt="Client management" width="100%"> | <img src="docs/images/users-management.jpg" alt="User management" width="100%"> |
+<p align="center">
+  <img src="docs/images/dashboard.jpg"
+       alt="Dashboard"
+       width="900">
+</p>
 
-### Transactions and Currency Exchange
+### Client Management
 
-| Deposit Transaction | Currency Exchange |
-|---|---|
-| <img src="docs/images/deposit-transaction.jpg" alt="Deposit transaction" width="100%"> | <img src="docs/images/currency-exchange.jpg" alt="Currency exchange" width="100%"> |
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/40d98421-27b2-4d48-99f4-fd0442cfa8c2"
+       alt="Client Management"
+       width="900">
+</p>
+
+### User Management
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3a0cdaab-6bb8-48b0-bdad-07f6ab114663"
+       alt="User Management"
+       width="900">
+</p>
+
+### Deposit Transaction
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/55020488-662e-41da-b103-865d5791e510"
+       alt="Deposit Transaction"
+       width="900">
+</p>
+
+### Currency Exchange
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8c0a218d-df7d-42b8-9e0c-3a2297676f5f"
+       alt="Currency Exchange"
+       width="900">
+</p>
 
 ### Login Register
 
 <p align="center">
-  <img src="docs/images/login-register.jpg" alt="Login register" width="900">
+  <img src="https://github.com/user-attachments/assets/a49a05b8-0c07-46cb-a81a-4ec974977c04"
+       alt="Login Register"
+       width="900">
 </p>
+
+---
 
 ## OOP Concepts Demonstrated
 
 | Concept | Implementation |
 |---|---|
-| **Classes and Objects** | The system uses meaningful classes such as `User`, `BankClient`, `Currency`, `Screens`, and `BankFxApp`. |
-| **Encapsulation** | Data fields are private or protected and accessed through methods, getters, and setters. |
-| **Inheritance** | `User` and `BankClient` inherit shared personal data and behavior from `Person`. |
+| **Classes and Objects** | The project uses meaningful classes such as `User`, `BankClient`, `Currency`, `Screens`, and `BankFxApp`. |
+| **Encapsulation** | Fields are private or protected and are accessed through methods, getters, and setters. |
+| **Inheritance** | `User` and `BankClient` inherit shared personal information from `Person`. |
 | **Abstraction** | `Person` is an abstract class containing the abstract method `getRoleDescription()`. |
 | **Polymorphism** | `User` and `BankClient` provide different implementations of `getRoleDescription()`. |
 | **Composition / Usage** | UI classes use business and helper classes such as `FileStorage`, `Permission`, `Util`, and `AppSession`. |
 | **Enumeration** | `SaveResult` represents the possible results of save operations. |
 
-## UML Diagrams
+---
 
-### Core Class Diagram
+## UML Documentation
 
-<p align="center">
-  <img src="docs/uml/core-class-diagram.png" alt="Core UML class diagram" width="1000">
-</p>
+The complete UML report includes the core class diagram and the UI/supporting classes diagram.
 
-### UI and Supporting Classes
+- [View or Download the Complete UML Report](https://github.com/user-attachments/files/29938351/Bank_Management_System_UML_Report_Ready.pdf)
 
-<p align="center">
-  <img src="docs/uml/ui-supporting-classes.png" alt="UI and supporting classes UML diagram" width="850">
-</p>
-
-A printable two-page UML report is also available here:
-
-- [`Bank_Management_System_UML_Report.pdf`](docs/uml/Bank_Management_System_UML_Report.pdf)
+---
 
 ## Main Classes
 
 | Class | Responsibility |
 |---|---|
 | `Main` | Entry point for the Console version. |
-| `MainFX` | Additional entry point for the JavaFX version. |
+| `MainFX` | Entry point for the JavaFX version. |
 | `BankFxApp` | Builds and controls the JavaFX interface. |
 | `Screens` | Handles Console menus and user interaction. |
 | `Person` | Abstract base class for shared personal information. |
@@ -122,7 +159,9 @@ A printable two-page UML report is also available here:
 | `Util` | Provides encryption, date, and formatting utilities. |
 | `SaveResult` | Represents the result of save operations. |
 
-## Technologies
+---
+
+## Technologies Used
 
 - Java 17+
 - JavaFX 21.0.2
@@ -130,6 +169,8 @@ A printable two-page UML report is also available here:
 - Object-Oriented Programming
 - Text-file persistence
 - Git and GitHub
+
+---
 
 ## Project Structure
 
@@ -142,10 +183,11 @@ BankManagementSystemJava/
 │   ├── LoginRegister.txt
 │   └── TransferLog.txt
 ├── docs/
-│   ├── images/
-│   └── uml/
+│   └── images/
+│       └── dashboard.jpg
 ├── src/main/java/com/bankmanagement/
-│   ├── fx/BankFxApp.java
+│   ├── fx/
+│   │   └── BankFxApp.java
 │   ├── AppSession.java
 │   ├── BankClient.java
 │   ├── ConsoleUI.java
@@ -169,19 +211,23 @@ BankManagementSystemJava/
 └── README.md
 ```
 
+---
+
 ## Data Persistence
 
-The application stores and loads its data from the `data` directory. Information remains available after the program is closed.
+The application stores and loads data from the `data` directory. The information remains available after the program is closed.
 
 | File | Stored Data |
 |---|---|
-| `BClients.txt` | Client and account records. |
+| `BClients.txt` | Client and bank account records. |
 | `BUsers.txt` | User credentials and permissions. |
 | `Currencies.txt` | Currency names, codes, and exchange rates. |
 | `LoginRegister.txt` | Login activity records. |
 | `TransferLog.txt` | Money transfer records. |
 
-Do not delete or rename the `data` folder while running the project.
+> Do not delete or rename the `data` folder while running the project.
+
+---
 
 ## Requirements
 
@@ -189,13 +235,15 @@ Before running the application, install:
 
 - **JDK 17 or later**
 - **Apache Maven**
-- An IDE such as IntelliJ IDEA, Eclipse, or NetBeans (optional)
+- An IDE such as IntelliJ IDEA, Eclipse, or NetBeans is optional.
 
-## Running the Project
+---
+
+## How to Run the Project
 
 ### JavaFX Version with Maven
 
-From the project root directory, run:
+Open a terminal in the project root directory and run:
 
 ```bash
 mvn clean javafx:run
@@ -231,6 +279,8 @@ chmod +x run.sh
 ./run.sh
 ```
 
+---
+
 ## Test Accounts
 
 | Username | Password |
@@ -239,7 +289,9 @@ chmod +x run.sh
 | `User2` | `1234` |
 | `w` | `w` |
 
-These accounts are included for demonstration and academic testing only.
+> These accounts are included for demonstration and academic testing only.
+
+---
 
 ## Team Members
 
@@ -250,28 +302,38 @@ These accounts are included for demonstration and academic testing only.
 
 > Add the student ID for each team member before the final course submission.
 
+---
+
 ## AI Usage Declaration
 
 ChatGPT was used as a learning assistant to review the project structure, improve OOP concept coverage, support debugging, prepare documentation, and refine the JavaFX version. The team understands the submitted code and is prepared to explain it during the oral defense.
 
+---
+
 ## Video Presentation
 
-Add the public or unlisted presentation link here before submission:
+Add the public or unlisted presentation link before submission:
 
 ```text
 Presentation Link: ADD_VIDEO_LINK_HERE
 ```
 
-## Course Submission Notes
+---
 
-Before submitting the repository, confirm that:
+## Final Submission Checklist
 
-- The repository is public.
-- Team member names and student IDs are complete.
-- The project report is included in PDF or Word format.
-- UML diagrams and program screenshots are included.
-- The video presentation link is added.
-- Every team member can explain their contribution and the main code components.
+- [x] Public GitHub repository.
+- [x] Complete Java source code.
+- [x] JavaFX graphical interface.
+- [x] Console interface.
+- [x] Text-file data persistence.
+- [x] Program screenshots.
+- [x] UML documentation.
+- [x] AI usage declaration.
+- [ ] Student IDs added.
+- [ ] Project report added in PDF or Word format.
+- [ ] Video presentation link added.
+- [ ] Every team member prepared for the oral defense.
 
 ---
 
