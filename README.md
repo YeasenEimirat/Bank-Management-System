@@ -320,7 +320,7 @@ Add the public or unlisted presentation link before submission:
 Presentation Link: ADD_VIDEO_LINK_HERE
 ```
 
-<img width="1433" height="930" alt="240ff700-ba52-47d2-bef9-1adbcc7217f1" src="https://github.com/user-attachments/assets/4cbec998-68d1-4f2a-a0c2-6a0551bc6426" />
+
 
 
 ---
