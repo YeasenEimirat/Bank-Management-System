@@ -70,9 +70,11 @@ The project provides two interfaces that share the same business classes and dat
 ### Dashboard
 
 <p align="center">
-  <img src="docs/images/dashboard.jpg"
+  <img src="https://github.com/user-attachments/assets/c684bca8-4fe5-4089-9acf-e2acfa838c9b" 
        alt="Dashboard"
        width="900">
+ 
+
 </p>
 
 ### Client Management
@@ -292,14 +294,14 @@ chmod +x run.sh
 > These accounts are included for demonstration and academic testing only.
 
 ---
-
 ## Team Members
 
 | Name | Role |
 |---|---|
-| **Yaseen Eimirat** | Tech Lead |
-| **Abda** | Team Member |
-
+| **Yaseen Hani Abdul-Majeed Eimirat** | Team Leader / Tech Lead |
+| **Abdullah Abu Amra** | Team Member |
+| **Sohaib Abu Al-Roos** | Team Member |
+| **Mohammad Al-Habbash** | Team Member |
 > Add the student ID for each team member before the final course submission.
 
 ---
@@ -318,22 +320,8 @@ Add the public or unlisted presentation link before submission:
 Presentation Link: ADD_VIDEO_LINK_HERE
 ```
 
----
+<img width="1433" height="930" alt="240ff700-ba52-47d2-bef9-1adbcc7217f1" src="https://github.com/user-attachments/assets/4cbec998-68d1-4f2a-a0c2-6a0551bc6426" />
 
-## Final Submission Checklist
-
-- [x] Public GitHub repository.
-- [x] Complete Java source code.
-- [x] JavaFX graphical interface.
-- [x] Console interface.
-- [x] Text-file data persistence.
-- [x] Program screenshots.
-- [x] UML documentation.
-- [x] AI usage declaration.
-- [ ] Student IDs added.
-- [ ] Project report added in PDF or Word format.
-- [ ] Video presentation link added.
-- [ ] Every team member prepared for the oral defense.
 
 ---
 
