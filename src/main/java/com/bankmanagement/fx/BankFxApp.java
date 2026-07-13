@@ -738,15 +738,15 @@ public class BankFxApp extends Application {
         refreshCurrenciesTable();
 
         TextField searchField = new TextField();
-        searchField.setPromptText("Currency code, e.g. USD");
+        searchField.setPromptText("Country or currency code, e.g. Algeria or DZD");
         Button findButton = new Button("Find");
         findButton.setOnAction(e -> {
-            String code = searchField.getText().trim();
-            if (code.isBlank()) {
+            String searchText = searchField.getText().trim();
+            if (searchText.isBlank()) {
                 refreshCurrenciesTable();
                 return;
             }
-            Currency currency = Currency.findByCode(code);
+            Currency currency = Currency.find(searchText);
             if (currency.isEmpty()) showWarning("Currency not found.");
             else currenciesTable.setItems(FXCollections.observableArrayList(currency));
         });

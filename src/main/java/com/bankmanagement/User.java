@@ -61,8 +61,17 @@ public class User extends Person {
                 email + Constants.SEPARATOR +
                 phone + Constants.SEPARATOR +
                 userName + Constants.SEPARATOR +
-                Util.encryptText(password) + Constants.SEPARATOR +
+                encryptedPasswordForStorage() + Constants.SEPARATOR +
                 permissions;
+    }
+
+    /**
+     * Encrypts the current plain password immediately before it is persisted.
+     * The same method is used for both new users and updated users.
+     */
+    private String encryptedPasswordForStorage() {
+        storedPassword = Util.encryptText(password);
+        return storedPassword;
     }
 
     public static List<User> loadAllUsers() {
@@ -91,11 +100,18 @@ public class User extends Person {
     }
 
     public static User find(String userName, String password) {
+        if (userName == null || password == null) return emptyUser();
+        String normalizedUserName = userName.trim();
+        String encryptedInputPassword = Util.encryptText(password);
+
         for (User user : loadAllUsers()) {
-            boolean sameUserName = user.userName.equalsIgnoreCase(userName);
-            boolean passwordMatches = user.password.equals(password)
-                    || user.storedPassword.equals(password)
-                    || user.storedPassword.equals(Util.encryptText(password));
+            boolean sameUserName = user.userName.trim().equalsIgnoreCase(normalizedUserName);
+
+            // New/updated users are stored encrypted. The additional comparisons
+            // preserve login compatibility with records created by older versions.
+            boolean passwordMatches = user.storedPassword.equals(encryptedInputPassword)
+                    || user.password.equals(password)
+                    || user.storedPassword.equals(password);
 
             if (sameUserName && passwordMatches) {
                 return user;
@@ -153,7 +169,7 @@ public class User extends Person {
 
     public void registerLogin() {
         String line = Util.nowString() + Constants.SEPARATOR + userName + Constants.SEPARATOR +
-                Util.encryptText(password) + Constants.SEPARATOR + permissions;
+                encryptedPasswordForStorage() + Constants.SEPARATOR + permissions;
         FileStorage.appendLine(Constants.LOGIN_REGISTER_FILE, line);
     }
 

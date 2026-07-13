@@ -50,15 +50,35 @@ public class Currency {
     }
 
     public static Currency findByCode(String code) {
+        if (code == null || code.isBlank()) return emptyCurrency();
+        String searchValue = code.trim();
         for (Currency currency : loadAllCurrencies()) {
-            if (currency.currencyCode.equalsIgnoreCase(code)) return currency;
+            if (currency.currencyCode.trim().equalsIgnoreCase(searchValue)) return currency;
         }
         return emptyCurrency();
     }
 
     public static Currency findByCountry(String country) {
+        if (country == null || country.isBlank()) return emptyCurrency();
+        String searchValue = country.trim();
         for (Currency currency : loadAllCurrencies()) {
-            if (currency.country.equalsIgnoreCase(country)) return currency;
+            if (currency.country.trim().equalsIgnoreCase(searchValue)) return currency;
+        }
+        return emptyCurrency();
+    }
+
+    /**
+     * Finds a currency using either its code (DZD) or country name (Algeria).
+     * This method is used by the graphical interface's single search field.
+     */
+    public static Currency find(String searchText) {
+        if (searchText == null || searchText.isBlank()) return emptyCurrency();
+        String searchValue = searchText.trim();
+
+        for (Currency currency : loadAllCurrencies()) {
+            boolean codeMatches = currency.currencyCode.trim().equalsIgnoreCase(searchValue);
+            boolean countryMatches = currency.country.trim().equalsIgnoreCase(searchValue);
+            if (codeMatches || countryMatches) return currency;
         }
         return emptyCurrency();
     }

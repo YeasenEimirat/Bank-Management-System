@@ -1,0 +1,23 @@
+LATEST PROJECT FIXES
+
+1. Currency search in JavaFX
+- The search field now accepts either a country name or a currency code.
+- Example: Algeria and DZD both return the Algerian Dinar.
+- Search ignores uppercase/lowercase differences and extra spaces.
+- The search-field hint was updated to explain both accepted input types.
+
+2. User password encryption
+- New and updated user passwords are encrypted with Util.encryptText() before
+  they are saved in BUsers.txt.
+- Passwords are decrypted with Util.decryptText() when user records are loaded.
+- Login encrypts the entered plain password and compares it with the encrypted
+  stored password.
+- Login remains compatible with user records created by older project versions.
+- Leading and trailing spaces around the username are ignored.
+- Login-register passwords continue to be stored encrypted.
+
+3. Regression tests
+- CurrencySearchTest verifies country/code lookup.
+- PasswordEncryptionTest verifies file encryption and successful login with the
+  original plain password.
+- LoginCompatibilityTest verifies the existing User1, User2, and w accounts.
