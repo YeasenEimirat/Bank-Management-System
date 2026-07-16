@@ -2,7 +2,7 @@
 
 # Bank Management System
 
-### Java OOP Application with JavaFX and Console Interfaces
+## Java OOP Application with JavaFX and Console Interfaces
 
 ![Java](https://img.shields.io/badge/Java-17%2B-orange?logo=openjdk)
 ![JavaFX](https://img.shields.io/badge/JavaFX-21.0.2-blue)
