@@ -317,7 +317,7 @@ ChatGPT was used as a learning assistant to review the project structure, improv
 Add the public or unlisted presentation link before submission:
 
 ```text
-Presentation Link:(https://drive.google.com/file/d/1JWKJfqpozzOJaolHP4rjNbsYM6KR6pf2/view?usp=sharing)
+Presentation Link:https://drive.google.com/file/d/1JWKJfqpozzOJaolHP4rjNbsYM6KR6pf2/view?usp=sharing
 ```
 
 
