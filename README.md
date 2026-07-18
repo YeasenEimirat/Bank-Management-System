@@ -288,8 +288,8 @@ chmod +x run.sh
 | Username | Password |
 |---|---|
 | `User1` | `9898` |
-| `User2` | `1234` |
-| `w` | `w` |
+| `User2` | `3456` |
+
 
 > These accounts are included for demonstration and academic testing only.
 
